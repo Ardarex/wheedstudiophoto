@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f2f0eb">
+<meta name="description" content="Wheedstudio Photography Tour 2027. Hľadáme fotografov na najväčšie eventy v Česku a na Slovensku.">
+<title>WHEEDSTUDIO — PHOTOGRAPHY TOUR 2027</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+--paper:#f2f0eb;
+--ink:#101010;
+--red:#b12f19;
+--muted:#696761;
+--line:rgba(16,16,16,.2);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:'DM Sans',Arial,sans-serif;
+}
+a{color:inherit}
+.wrap{
+width:min(1160px,calc(100% - 44px));
+margin:auto;
+}
+
+header{
+padding:24px 0;
+border-bottom:1px solid var(--line);
+}
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+.brand{
+font-weight:900;
+letter-spacing:.12em;
+font-size:15px;
+text-decoration:none;
+}
+.navlinks{
+display:flex;
+gap:25px;
+align-items:center;
+}
+.navlinks a{
+text-decoration:none;
+font-size:12px;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+.nav .nav-cta{
+background:var(--ink);
+color:white;
+padding:12px 17px;
+}
+
+.hero{
+padding:72px 0 54px;
+overflow:hidden;
+}
+.eyebrow{
+font-size:11px;
+letter-spacing:.2em;
+text-transform:uppercase;
+font-weight:800;
+color:var(--red);
+display:flex;
+align-items:center;
+gap:10px;
+}
+.eyebrow:before{
+content:"";
+width:30px;
+height:2px;
+background:var(--red);
+}
+h1,h2,h3,p{margin-top:0}
+.hero h1{
+font-family:'Barlow Condensed',Impact,sans-serif;
+text-transform:uppercase;
+font-size:clamp(76px,14vw,178px);
+line-height:.77;
+letter-spacing:-.045em;
+margin:28px 0 22px;
+font-weight:900;
+}
+.hero h1 span{display:block}
+.hero h1 .outline{
+-webkit-text-stroke:2px var(--ink);
+color:transparent;
+}
+.hero-bottom{
+display:grid;
+grid-template-columns:1fr 330px;
+gap:40px;
+align-items:end;
+}
+.hero-copy{
+font-size:clamp(16px,2vw,21px);
+line-height:1.55;
+max-width:660px;
+}
+.hero-copy strong{font-weight:800}
+.hero-note{
+border-left:3px solid var(--red);
+padding:4px 0 4px 18px;
+font-size:13px;
+line-height:1.5;
+color:var(--muted);
+}
+.stamp{
+display:inline-block;
+background:var(--red);
+color:white;
+padding:13px 18px;
+font-weight:900;
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+transform:rotate(-2deg);
+margin-top:16px;
+}
+
+section{
+padding:76px 0;
+border-top:1px solid var(--line);
+}
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:30px;
+margin-bottom:36px;
+}
+.section-head h2{
+font-family:'Barlow Condensed',Impact,sans-serif;
+text-transform:uppercase;
+font-size:clamp(48px,8vw,92px);
+line-height:.84;
+letter-spacing:-.03em;
+margin:12px 0 0;
+}
+.section-head p{
+max-width:350px;
+color:var(--muted);
+font-size:14px;
+line-height:1.6;
+margin:0;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:55px;
+align-items:start;
+}
+.big-copy{
+font-size:clamp(21px,3vw,34px);
+line-height:1.24;
+font-weight:700;
+letter-spacing:-.04em;
+}
+.body-copy{
+font-size:15px;
+color:var(--muted);
+line-height:1.8;
+}
+.facts{
+display:grid;
+grid-template-columns:1fr 1fr;
+border-top:1px solid var(--line);
+border-left:1px solid var(--line);
+}
+.fact{
+padding:22px;
+border-right:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+.fact b{
+display:block;
+font-family:'Barlow Condensed',sans-serif;
+font-size:38px;
+line-height:1;
+}
+.fact span{
+display:block;
+margin-top:8px;
+text-transform:uppercase;
+letter-spacing:.1em;
+font-size:10px;
+font-weight:800;
+color:var(--muted);
+}
+
+.red-section{
+background:var(--red);
+color:white;
+border:0;
+}
+.red-section .eyebrow{color:#ffe1d9}
+.red-section .eyebrow:before{background:#ffe1d9}
+.red-section .section-head p{color:rgba(255,255,255,.8)}
+.perks{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1px;
+background:rgba(255,255,255,.35);
+border:1px solid rgba(255,255,255,.35);
+}
+.perk{
+padding:27px;
+background:var(--red);
+min-height:190px;
+}
+.perk .num{
+font-family:'Barlow Condensed',sans-serif;
+font-size:45px;
+font-weight:900;
+opacity:.65;
+}
+.perk h3{
+font-family:'Barlow Condensed',sans-serif;
+text-transform:uppercase;
+font-size:29px;
+margin:12px 0 8px;
+}
+.perk p{
+font-size:13px;
+line-height:1.65;
+color:rgba(255,255,255,.85);
+margin:0;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+.step{
+border-top:4px solid var(--ink);
+padding-top:18px;
+}
+.step small{
+font-weight:900;
+color:var(--red);
+letter-spacing:.15em;
+}
+.step h3{
+font-family:'Barlow Condensed',sans-serif;
+text-transform:uppercase;
+font-size:31px;
+margin:12px 0 7px;
+}
+.step p{
+font-size:13px;
+line-height:1.7;
+color:var(--muted);
+}
+
+.contribution{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+.price{
+font-family:'Barlow Condensed',sans-serif;
+font-size:clamp(65px,10vw,120px);
+font-weight:900;
+letter-spacing:-.05em;
+line-height:.9;
+white-space:nowrap;
+}
+.price small{
+font-size:32px;
+letter-spacing:0;
+}
+.price-label{
+font-size:11px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.16em;
+margin-top:18px;
+}
+.contrib-copy{
+font-size:14px;
+line-height:1.8;
+color:var(--muted);
+}
+.notice{
+border-left:3px solid var(--red);
+padding:14px 17px;
+background:rgba(177,47,25,.06);
+font-size:12px;
+line-height:1.7;
+margin-top:20px;
+color:var(--ink);
+}
+
+.faq{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px 50px;
+}
+.faq article{
+border-top:1px solid var(--line);
+padding-top:17px;
+}
+.faq h3{
+font-family:'Barlow Condensed',sans-serif;
+font-size:25px;
+text-transform:uppercase;
+margin-bottom:8px;
+}
+.faq p{
+font-size:13px;
+color:var(--muted);
+line-height:1.7;
+margin:0;
+}
+
+.join{
+background:var(--ink);
+color:white;
+padding:70px 0;
+}
+.join-inner{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+}
+.join h2{
+font-family:'Barlow Condensed',sans-serif;
+text-transform:uppercase;
+font-size:clamp(54px,8vw,94px);
+line-height:.85;
+margin:15px 0;
+}
+.join p{
+color:#bdbdbd;
+font-size:14px;
+line-height:1.7;
+}
+.form{
+display:grid;
+gap:12px;
+}
+.form input,.form textarea{
+width:100%;
+border:1px solid #555;
+background:#1c1c1c;
+color:white;
+padding:14px;
+font:inherit;
+font-size:13px;
+border-radius:0;
+}
+.form textarea{
+min-height:120px;
+resize:vertical;
+}
+.form button{
+border:0;
+background:var(--red);
+color:white;
+padding:16px 20px;
+text-transform:uppercase;
+letter-spacing:.1em;
+font-size:12px;
+font-weight:900;
+cursor:pointer;
+}
+.form button:hover{background:#d13d23}
+.form-note{
+font-size:11px!important;
+color:#999!important;
+}
+.success{
+display:none;
+border:1px solid #777;
+padding:13px;
+font-size:12px;
+line-height:1.6;
+}
+
+footer{
+padding:24px 0;
+background:var(--ink);
+color:#999;
+border-top:1px solid #333;
+font-size:10px;
+letter-spacing:.08em;
+text-transform:uppercase;
+}
+.foot{
+display:flex;
+justify-content:space-between;
+gap:20px;
+}
+
+@media(max-width:760px){
+.wrap{width:min(100% - 30px,600px)}
+.navlinks a:not(.nav-cta){display:none}
+.hero{padding:55px 0 42px}
+.hero-bottom,.about-grid,.contribution,.join-inner{
+grid-template-columns:1fr;
+gap:25px;
+}
+.hero-note{max-width:420px}
+.section-head{display:block}
+.section-head p{margin-top:18px}
+.perks,.steps{grid-template-columns:1fr}
+.perk{min-height:0}
+.faq{grid-template-columns:1fr}
+.facts{margin-top:10px}
+.price{font-size:clamp(65px,16vw,100px)}
+.foot{display:block;line-height:2}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#top">WHEEDSTUDIO®</a>
+<nav class="navlinks">
+<a href="#projekt">Projekt</a>
+<a href="#vyhody">Výhody</a>
+<a href="#prispevok">Odmena</a>
+<a class="nav-cta" href="#registracia">Chcem sa pridať ↗</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+
+<div class="wrap hero">
+<div class="eyebrow">Otvorená výzva pre fotografov · 2027</div>
+
+<h1>
+<span>THE</span>
+<span class="outline">PHOTO</span>
+<span>TOUR</span>
+<span style="font-size:.43em;letter-spacing:.02em;margin-top:16px">20<span style="color:var(--red)">27</span></span>
+</h1>
+
+<div class="hero-bottom">
+<div>
+<p class="hero-copy">
+<strong>Najväčšie eventy. Jedna fotografická crew. Spoločná tvorba.</strong>
+<br>
+Pridaj sa k Wheedstudio Photography Tour 2027 a foť hudbu, ľudí a atmosféru priamo v centre diania.
+</p>
+<span class="stamp">Tvoja tvorba. Tvoje zážitky. Jeden tím.</span>
+</div>
+
+<div class="hero-note">
+Hľadáme fotografov, ktorí chcú rásť, tvoriť portfólio a zažiť veľké eventy z druhej strany objektívu. Cestovné náklady sa riešia samostatne.
+</div>
+</div>
+</div>
+
+<section id="projekt">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">O projekte</div>
+<h2>Čo je<br>Wheedstudio?</h2>
+</div>
+<p>Fotografická platforma a kreatívna crew postavená na spoločnej tvorbe, eventoch a vizuálnych príbehoch.</p>
+</div>
+
+<div class="about-grid">
+<div class="big-copy">
+Nie sme len partia ľudí s fotoaparátmi. Sme priestor, kde sa stretávajú fotografi, energia eventov a chuť posúvať vlastnú tvorbu.
+</div>
+
+<div>
+<p class="body-copy">
+Wheedstudio Photography Tour 2027 je spoločný projekt pre fotografov, ktorí chcú dokumentovať veľké hudobné a kultúrne podujatia v Česku a na Slovensku. Cieľom je vytvoriť komunitu tvorcov, priniesť kvalitný fotoobsah z podujatí a dať účastníkom príležitosť získať nové skúsenosti, kontakty a materiál do portfólia.
+</p>
+
+<div class="facts">
+<div class="fact"><b>CZ/SK</b><span>Česko a Slovensko</span></div>
+<div class="fact"><b>2027</b><span>Tour sezóna</span></div>
+<div class="fact"><b>PHOTO</b><span>Eventová fotografia</span></div>
+<div class="fact"><b>1 CREW</b><span>Spoločná tvorba</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="red-section" id="vyhody">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">Čo získaš</div>
+<h2>Viac než<br>len vstup.</h2>
+</div>
+<p>Účasť je kombináciou fotografickej príležitosti, eventového zážitku a spoločnej práce v tíme.</p>
+</div>
+
+<div class="perks">
+<article class="perk">
+<div class="num">01</div>
+<h3>VIP vstup 2×</h3>
+<p>VIP vstupy pre dve osoby na každý event, na ktorom bude Wheedstudio fotograficky pôsobiť. Konkrétne podmienky podľa pravidiel organizátora.</p>
+</article>
+
+<article class="perk">
+<div class="num">02</div>
+<h3>Reálne eventy</h3>
+<p>Možnosť fotografovať na vybraných veľkých hudobných a kultúrnych podujatiach v Česku a na Slovensku.</p>
+</article>
+
+<article class="perk">
+<div class="num">03</div>
+<h3>Portfólio & crew</h3>
+<p>Nové zábery, skúsenosti, kontakty a spolupráca s ďalšími fotografmi. Priestor posunúť vlastný štýl.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">Ako to funguje</div>
+<h2>Tri kroky<br>do tour.</h2>
+</div>
+<p>Prihlásenie je nezáväzný prvý krok. Účasť sa potvrdí až po dohode konkrétnych podmienok.</p>
+</div>
+
+<div class="steps">
+<article class="step">
+<small>01 / PRIHLÁSENIE</small>
+<h3>Pošli svoj záujem</h3>
+<p>Vyplň formulár a pripoj odkaz na svoje fotografie, Instagram alebo portfólio.</p>
+</article>
+
+<article class="step">
+<small>02 / DOHODA</small>
+<h3>Prejdeme detaily</h3>
+<p>Dohodneme sa na odmene, dostupnosti, pravidlách fotografovania, cestovaní a konkrétnych eventoch.</p>
+</article>
+
+<article class="step">
+<small>03 / TOUR</small>
+<h3>Poď tvoriť</h3>
+<p>Po potvrdení účasti sa zapojíš do plánovania a fotografovania vybraných zastávok tour.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="prispevok">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">Odmena pre fotografov</div>
+<h2>Za svoju<br>tvorbu dostaneš.</h2>
+</div>
+<p>Fotografi získajú finančnú odmenu 150 až 300 € podľa rozsahu spolupráce a konkrétneho eventu. Cesta sa rieši samostatne.</p>
+</div>
+
+<div class="contribution">
+<div>
+<div class="price">150 – 300<small> €</small></div>
+<div class="price-label">Finančná odmena za fotografovanie</div>
+</div>
+
+<div>
+<p class="contrib-copy">
+Za svoju fotografickú prácu získaš finančnú odmenu od 150 € do 300 €. Presná výška odmeny závisí od konkrétneho eventu, rozsahu práce a dohodnutých výstupov.
+</p>
+
+<div class="notice">
+<strong>Dôležité:</strong> Odmena je určená fotografovi za jeho prácu. Neplatíš žiadny vstupný ani členský poplatok. Doprava a prípadné ubytovanie sa riešia samostatne podľa dohody.
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="eyebrow">Otázky a odpovede</div>
+<h2>Predtým,<br>než vyrazíš.</h2>
+</div>
+</div>
+
+<div class="faq">
+<article>
+<h3>Kto sa môže prihlásiť?</h3>
+<p>Fotografi a fotografky, ktorí majú vlastný fotoaparát, chuť tvoriť a vedia spolupracovať v tíme. Úroveň skúseností a techniku si dohodneme pri výbere.</p>
+</article>
+
+<article>
+<h3>Je cesta v cene?</h3>
+<p>Fotograf dostáva odmenu 150–300 € podľa rozsahu práce a konkrétneho eventu. Cesta sa rieši samostatne a podmienky jej zabezpečenia alebo preplatenia sa dohodnú vopred.</p>
+</article>
+
+<article>
+<h3>Čo znamená VIP vstup 2×?</h3>
+<p>Na eventoch, na ktorých bude Wheedstudio fotografovať, sú súčasťou spolupráce VIP vstupy pre dve osoby. Konkrétny rozsah sa potvrdí podľa dohody s organizátorom podujatia.</p>
+</article>
+
+<article>
+<h3>Sú všetky eventy už potvrdené?</h3>
+<p>Nie nevyhnutne. Zoznam, dátumy a fotografické akreditácie sa budú zverejňovať a potvrdzovať postupne. Prihlásenie samo osebe negarantuje vstup na každý event.</p>
+</article>
+</div>
+</div>
+</section>
+
+<div class="join" id="registracia">
+<div class="wrap join-inner">
+
+<div>
+<div class="eyebrow">Pridaj sa k projektu</div>
+<h2>Buď pri tom.<br>Foť s nami.</h2>
+
+<p>
+Vyplň základné informácie a odošli svoj záujem priamo na
+<a href="mailto:Wheedstudio@gmail.com" style="color:white;font-weight:800">Wheedstudio@gmail.com</a>.
+Ozveme sa ti s ďalšími informáciami o odmene, cestovaní a eventoch.
+</p>
+
+<p class="form-note">
+Prihlásenie je nezáväzné. Výška odmeny a cestovné podmienky sa potvrdia vopred.
+</p>
+</div>
+
+<form class="form" id="joinForm">
+<input required name="name" placeholder="Meno a priezvisko" aria-label="Meno a priezvisko">
+<input required type="email" name="email" placeholder="Tvoj e-mail" aria-label="E-mail">
+<input name="portfolio" placeholder="Instagram / portfólio / web" aria-label="Portfólio">
+<textarea name="message" placeholder="Niečo o tebe, tvojej technike alebo eventoch, ktoré ťa zaujímajú…" aria-label="Správa"></textarea>
+
+<button type="submit">Odoslať prihlášku ↗</button>
+
+<div class="success" id="success" role="status">
+E-mail je pripravený. Dokonči jeho odoslanie vo svojom e-mailovom klientovi.
+</div>
+
+<p class="form-note">
+Po kliknutí sa otvorí tvoj e-mailový klient s pripravenou správou na Wheedstudio@gmail.com.
+</p>
+</form>
+
+</div>
+</div>
+</main>
+
+<footer>
+<div class="wrap foot">
+<span>© Wheedstudio · Photography Tour 2027</span>
+<span>
+<a href="mailto:Wheedstudio@gmail.com" style="color:inherit">Wheedstudio@gmail.com</a>
+· Česko / Slovensko
+</span>
+</div>
+</footer>
+
+<script>
+document.getElementById('joinForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = new FormData(this);
+
+    const subject = encodeURIComponent(
+        'Prihláška — Wheedstudio Photography Tour 2027'
+    );
+
+    const body = encodeURIComponent(
+`PRIHLÁŠKA — WHEEDSTUDIO PHOTOGRAPHY TOUR 2027
+
+Meno: ${form.get('name')}
+E-mail: ${form.get('email')}
+Portfólio: ${form.get('portfolio') || 'Neuvedené'}
+
+O mne:
+${form.get('message') || 'Neuvedené'}
+
+Mám záujem zapojiť sa ako fotograf/fotografka do Wheedstudio Photography Tour 2027.
+
+Prosím o ďalšie informácie o eventoch, finančnej odmene 150–300 € a cestovných podmienkach.`
+    );
+
+    document.getElementById('success').style.display = 'block';
+
+    window.location.href =
+        'mailto:Wheedstudio@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+
+</body>
+</html>
